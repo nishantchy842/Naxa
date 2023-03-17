@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-scroll';
 import { fetchUsers } from '../action'
 
-const Header = () => {
+const Header = (props) => {
     const users = useSelector(state => state.users)
 
 
@@ -13,8 +13,8 @@ const Header = () => {
                 {
                     users.map(item => {
                         return (
-                            <div style={{backgroundColor:'#d9d5d4', marginRight:'10px'}} key={item.id}>
-                                <li style={{listStyle:'none', cursor:'pointer'}}><Link to={item.id} spy={true} smooth={true} offset={-100} duration={500}>{item.title}</Link></li>
+                            <div style={{backgroundColor:'#d9d5d4', marginRight:'2px', padding:'10px'}} key={item.id}>
+                                <li style={{listStyle:'none', cursor:'pointer',color: props.color}}><Link to={item.title} spy={true} smooth={true} offset={-100} duration={500}>{item.title}</Link></li>
                             </div>
                         )
                     })

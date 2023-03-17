@@ -6,7 +6,7 @@ import Header from './component/header';
 import Body from './component/body';
 
 function App() {
-  const [info,setInfo]=useState([])
+  // const [info,setInfo]=useState([])
   // useEffect(()=>{
   //   fetch('https://admin.naxa.com.np/api/services').then(res=>res.json().then(data=>setInfo(data)))
   // },[])
@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="App">
      <h1>Naxa</h1>
-    <Header />
-    <Body />
+    <Header color='black' />
+    <Body bgcolor='#3A7DBF' color='black' />
     </div>
   );
 }
