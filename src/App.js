@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useEffect,useState } from 'react'
 import './App.css';
+import { useDispatch,useSelector } from 'react-redux';
+import { fetchUsers } from './action';
+import Header from './component/header';
+import Body from './component/body';
 
 function App() {
+  const [info,setInfo]=useState([])
+  // useEffect(()=>{
+  //   fetch('https://admin.naxa.com.np/api/services').then(res=>res.json().then(data=>setInfo(data)))
+  // },[])
+ const disptach=useDispatch()
+//  const users=useSelector(state=>state.users)  
+ useEffect(()=>{
+  disptach(fetchUsers())
+ },[]) 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Naxa</h1>
+    <Header />
+    <Body />
     </div>
   );
 }
