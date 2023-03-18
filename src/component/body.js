@@ -9,12 +9,16 @@ const Body = (props) => {
             { 
                 users.map((item)=>{
                     return (
-                       <div id={item.title} key={item.id} style={{display:'flex',height:'80vh'}}>
-                       <div>
-                       <img src={item.photo} width={500} alt='/' />
+                       <div className='layout' id={item.title} key={item.id} style={{
+                        display:'flex',
+                        height:'100vh',
+                        padding:'20px'
+                    }}>
+                       <div style={{padding:'150px'}}>
+                       <img src={item.icon} width={300} alt='/' />
                        </div>
                        <div>
-                       <img src={item.icon} width={60} height={60} alt='/' style={{border: '5px solid #1C6EA4'
+                       <img src={item.photo} width={60} height={60} alt='/' style={{border: '5px solid #1C6EA4'
                     }} />
                        <h2>{item.title}</h2>
                        <p style={{

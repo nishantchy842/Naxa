@@ -9,7 +9,7 @@ const Header = (props) => {
 
     return (
         <div>
-            <header style={{ display: 'flex' ,backgroundColor:'#e0bbb8'}}>
+            <header style={{ display: 'flex' ,backgroundColor:'#e0bbb8',marginBottom:'20px'}}>
                 {
                     users.map(item => {
                         return (
